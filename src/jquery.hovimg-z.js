@@ -36,11 +36,10 @@
       };
 
 
-
       var settings = $.extend({}, this.defaultOptions, options);
       var functions = {
-        showImage(hovimgzz) {
-          if ($(hovimgzz).data('hovimgz') != "" && $(hovimgz).data('old-hovimgz') == null) {
+        showImage(hovimgz) {
+          if ($(hovimgz).data('hovimgz') != "" && $(hovimgz).data('old-hovimgz') == null) {
             $(hovimgz).data('old-hovimgz', $(hovimgz).attr('src'));
             $(hovimgz).attr('src', $(hovimgz).data('hovimgz'));
           }
