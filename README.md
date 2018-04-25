@@ -23,18 +23,20 @@ $(window).on('load', function(){
 | `data-hovimgz`  | Path of image to display upon hover               |
 ## Changing defaults
 1. Use JSON to change the options
-    1. Example of changing the image selector class:
+    1. Example of changing the image selector class and fadeTime:
         ```javascript
         $(document).hovimgz({
           elements: {
             selectors: {
               image: '.hoverImage',
             }
-          }
+          },
+          fadeTime: 125
         });
         ```
 ### Available options
 
-| Option                     | Description                                                    | Default value |
-| -------------------------- | -------------------------------------------------------------- | ------------- |
-| `elements.selectors.image` | The selector used to identify the images that are hoverable    | `.hovimg-z`   |
+| Option                     | Description                                                          | Default value |
+| -------------------------- | -------------------------------------------------------------------- | ------------- |
+| `elements.selectors.image` | The selector used to identify the images that are hoverable          | `.hovimg-z`   |
+| `fadeTime`                 | The speed at which the fade effect is carried out (in milliseconds)  | `125`         |
