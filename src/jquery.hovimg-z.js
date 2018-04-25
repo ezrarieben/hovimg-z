@@ -32,7 +32,8 @@
           selectors: {
             image: '.hovimg-z',
           }
-        }
+        },
+        fadeTime: 125
       };
 
 
@@ -40,14 +41,22 @@
       var functions = {
         showImage(hovimgz) {
           if ($(hovimgz).data('hovimgz') != "" && $(hovimgz).data('old-hovimgz') == null) {
-            $(hovimgz).data('old-hovimgz', $(hovimgz).attr('src'));
-            $(hovimgz).attr('src', $(hovimgz).data('hovimgz'));
+            $(hovimgz).fadeOut(settings.fadeTime, function() {
+              $(hovimgz).data('old-hovimgz', $(hovimgz).attr('src'));
+              $(hovimgz).attr('src', $(hovimgz).data('hovimgz'));
+            });
+
+            $(hovimgz).fadeIn(settings.fadeTime);
           }
         },
         hideImage(hovimgz) {
           if ($(hovimgz).data('old-hovimgz') != null) {
-            $(hovimgz).attr('src', $(hovimgz).data('old-hovimgz'));
-            $(hovimgz).data('old-hovimgz', null)
+            $(hovimgz).fadeOut(settings.fadeTime, function() {
+              $(hovimgz).attr('src', $(hovimgz).data('old-hovimgz'));
+              $(hovimgz).data('old-hovimgz', null)
+            });
+
+            $(hovimgz).fadeIn(settings.fadeTime);
           }
         }
       }
@@ -66,6 +75,7 @@
         $(elements.images).on('mouseenter', function() {
           functions.showImage(this);
         });
+
         /**
          * Add event handler for image mouse leave (hover off)
          */
