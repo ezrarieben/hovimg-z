@@ -40,3 +40,6 @@ $(window).on('load', function(){
 | -------------------------- | -------------------------------------------------------------------- | ------------- |
 | `elements.selectors.image` | The selector used to identify the images that are hoverable          | `.hovimg-z`   |
 | `fadeTime`                 | The speed at which the fade effect is carried out (in milliseconds)  | `125`         |
+---
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
