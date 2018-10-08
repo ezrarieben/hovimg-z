@@ -1,5 +1,7 @@
 # hovimg-z
-A jquery plugin that changes the source of an image upon hover
+A jquery plugin that changes the source of an image upon hover<br />
+<br />
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 ## Setting up hovimg-z
 1. Import the [jQuery library](https://www.google.com "jQuery's CDN Page")
 2. Load the hovimg-z script in your HTML after the body
